@@ -36,16 +36,5 @@
   },
   "jest": {
     "preset": "react-native"
-  },
-  "alias-hq": {
-    "folders": [
-      "src"
-    ],
-    "modules": [
-      "@components",
-      "@screens",
-      "@navigation"
-    ],
-    "prefix": ""
   }
 }

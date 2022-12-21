@@ -1,6 +1,8 @@
-import type { ScreenValue } from './types';
+import { ScreenValue } from './types';
 
-const bottomTabBarRoutesMap: Record<ScreenValue, string> = {
+type BottomTabRouteMap = Record<ScreenValue, string>;
+
+const bottomTabBarRoutesMap: BottomTabRouteMap = {
   HOME_SCREEN: 'Home',
   NOTIFICATIONS_SCREEN: 'Notifications',
   PROFILE_SCREEN: 'Profile',
@@ -8,5 +10,5 @@ const bottomTabBarRoutesMap: Record<ScreenValue, string> = {
 
 export const toBottomBarRouteName = (
   screen: ScreenValue,
-  routesMap = bottomTabBarRoutesMap,
+  routesMap: Partial<BottomTabRouteMap> = bottomTabBarRoutesMap,
 ) => routesMap[screen] ?? '';
